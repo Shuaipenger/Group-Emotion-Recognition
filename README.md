@@ -56,7 +56,7 @@
   *  FaceFeatures：处理我们数据集提取的人脸特征向量。
   *  GlobalFeatures：使用Densenet161网络提取的全局特征向量。
   *  FaceFeatures_Crop_sampling：剪切得到的图片块
-**test_list**“：这包含来自GAF3.0数据集的图像列表，用作EVAL数据集。
+**test_list**：这包含来自GAF3.0数据集的图像列表，用作EVAL数据集。
 
 **val_list**：这包含来自GAF3.0数据集的图像列表，用作VAL数据集。
 
@@ -73,6 +73,7 @@
 
 
 ## 结果复现
+**复现GAF3.0数据集上的结果**
 1.使用代码文件训练并保存为模型文件
 
 2.使用模型文件提取npz文件（使用`My_Model_OutputSaver_TrainDataset.py`代码提取npz）      
@@ -87,6 +88,23 @@
 |  Model3 | Model3_skeletons.py | model_3_1_DenseNet161_skeletons_model1  | model3_output_data  |   
 |  Model4 | Model4_skeletons_EfficientNet.py  | EfficientNet_skeletons  |model4_1_output_data   |  
 |  Model5 | Model5_FaceAttention_AlignedModel_pre_cross_vit.py  |FaceAttention_AlignedModel_FullTrain_lr001_dropout_BN_SoftmaxLr01   |model5_output_data   |  
+
+**复现我们的数据集上的结果**
+1.使用代码文件训练并保存为模型文件
+
+2.使用模型文件提取npz文件（使用`My_Model_OutputSaver_TrainDataset.py`代码提取npz）      
+
+3.①用npz文件做混淆矩阵（`Confusion_matrix.py`）②复现准确率（`Acc_Reappearance.py`）③用npz文件做Ensemble调比例（`GirdSearch.py`）
+
+| |   | 代码 | 模型文件  | 保存的npz结果文件  |  
+|---|---|------|---|---|
+| Face Detected |Hybird Network Model | 1_FaceAttention_AlignedModel_pre_cross_vit_wzq_two_crossvit_Faces.py | model_6_1A_All_New_data  |  model6_1_output_data.npz |  
+| Face Detected |  Scene-Densenet161 | Densenet_Emotiw_lr001_wzq_Face.py   |model_1_1_densenet_New_data_Face.pt | model_output_data_Densenet_Face.npz |   
+| No Face Detected |  Hybird Network Model |1_FaceAttention_AlignedModel_pre_cross_vit_wzq_two_crossvit_NoFaces.py |model_6_1B_All_New_data2  | model6_2_output_data.npz | 
+| No Face Detected |  Scene-Densenet161 | Densenet_Emotiw_lr001_wzq_NoFace.py | model_1_1_densenet_New_data_NoFace.pt  | model_output_data_Densenet_No_Face.npz  |  
+| All |  Hybird Network Model_A | 1_FaceAttention_AlignedModel_pre_cross_vit_wzq_onlyone_crossvit.py | model_5_1_All_New_data |model5_output_data_onecrossvit.npz |  
+
+
 
 # 注：
 
