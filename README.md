@@ -14,28 +14,30 @@
 
 **Visualization**：混淆矩阵可视化。
 
-**Dataset**:包含emotic、emotiw和我们自己收集的数据集，以及中间处理文件
+# Dataset文件介绍
 
-AlignedCroppedImages: 剪切对齐后的GAF3.0数据集中人脸图片。
+包含emotic、emotiw和我们自己收集的数据集，以及中间处理文件。
 
-CroppedFaces：剪切处理的GAF3.0数据集中人脸图片
+**AlignedCroppedImages**: 剪切对齐后的GAF3.0数据集中人脸图片。
 
-FaceCoordinates：处理GAF3.0数据集中人脸位置坐标文件。
+**CroppedFaces**：剪切处理的GAF3.0数据集中人脸图片
 
-FaceFeatures：处理GAF3.0数据集得到的提取的人脸特征向量。
+**FaceCoordinates**：处理GAF3.0数据集中人脸位置坐标文件。
 
-Process_wzq_dataset：制作数据集时，从视频中处理提取图片的程序。
+**FaceFeatures**：处理GAF3.0数据集得到的提取的人脸特征向量。
 
-emotic：emotic数据集文件。
+**Process_wzq_dataset**：制作数据集时，从视频中处理提取图片的程序。
 
-emotiw: GAF3.0数据集文件。
+**emotic**：emotic数据集文件。
 
-wzq_dataset：我们收集的数据集文件和相关处理后的图片文件。
-  *  AlignedCroppedImages
-  *  CroppedFaces
-  *  FaceFeatures
-  *  GlobalFeatures
-  *  FaceFeatures_Crop_sampling
+**emotiw**: GAF3.0数据集文件。
+
+**wzq_dataset**：我们收集的数据集文件和相关处理后的图片文件。
+  *  AlignedCroppedImages：剪切并对齐处理的我们的数据集得到的人脸图片。
+  *  CroppedFaces：剪切处理的我们的数据集得到的人脸图片。
+  *  FaceFeatures：处理我们数据集提取的人脸特征向量。
+  *  GlobalFeatures：使用Densenet161网络提取的全局特征向量。
+  *  FaceFeatures_Crop_sampling：剪切得到的图片块
 
 
 # 安装环境
