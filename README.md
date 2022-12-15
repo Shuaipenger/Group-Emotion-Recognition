@@ -94,4 +94,6 @@
 
 2. SphereFace 模型（用于对齐模型）的实现改编自 [this](https://github.com/clcarwin/sphereface_pytorch).
 
-3. 整体网络框架部分参考改编自[this](https://github.com/vlgiitr/Group-Level-Emotion-Recognition).
+3. Openpose的代码实现改编自 [this](https://github.com/CMU-Perceptual-Computing-Lab/openpose).
+
+4. 整体网络框架部分参考改编自[this](https://github.com/vlgiitr/Group-Level-Emotion-Recognition).
