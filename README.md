@@ -1,4 +1,4 @@
-# Group_Emotion_Recognition_HMM文件介绍
+## Group_Emotion_Recognition_HMM文件介绍
 
 **Models_GAF3.0**：在GAF3.0数据集上训练的代码文件。
 
@@ -14,7 +14,7 @@
 
 **Visualization**：混淆矩阵可视化。
 
-# Dataset文件介绍
+## Dataset文件介绍
 
 包含emotic、emotiw和我们自己收集的数据集，以及中间处理文件。
 
@@ -40,7 +40,7 @@
   *  FaceFeatures_Crop_sampling：剪切得到的图片块
 
 
-# 安装环境
+## 安装环境
 
 The following dependencies are required by the repository:
 
@@ -68,7 +68,7 @@ The following dependencies are required by the repository:
 
 
 
-# 结果复现
+## 结果复现
 1.使用代码文件训练并保存为模型文件
 
 2.使用模型文件提取npz文件（使用My_Model_OutputSaver_TrainDataset.py代码提取npz）      
