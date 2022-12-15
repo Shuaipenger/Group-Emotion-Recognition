@@ -74,6 +74,7 @@
 
 ## 结果复现
 **复现GAF3.0数据集上的结果**
+
 1.使用代码文件训练并保存为模型文件
 
 2.使用模型文件提取npz文件（使用`My_Model_OutputSaver_TrainDataset.py`代码提取npz）      
@@ -90,11 +91,12 @@
 |  Model5 | Model5_FaceAttention_AlignedModel_pre_cross_vit.py  |FaceAttention_AlignedModel_FullTrain_lr001_dropout_BN_SoftmaxLr01   |model5_output_data   |  
 
 **复现我们的数据集上的结果**
+
 1.使用代码文件训练并保存为模型文件
 
-2.使用模型文件提取npz文件（使用`My_Model_OutputSaver_TrainDataset.py`代码提取npz）      
+2.使用模型文件提取npz文件（使用`My_ModelOutputs_wzq_dataset.py`代码提取npz）      
 
-3.①用npz文件做混淆矩阵（`Confusion_matrix.py`）②复现准确率（`Acc_Reappearance.py`）③用npz文件做Ensemble调比例（`GirdSearch.py`）
+3.①用npz文件做混淆矩阵（`Confusion_matrix_wzq_dataset.py`）②复现准确率（`Acc_Reappearance_wzq_dataset.py`）③用npz文件做Ensemble调比例（`GirdSearch_wzq_dataset.py`）
 
 | |   | 代码 | 模型文件  | 保存的npz结果文件  |  
 |---|---|------|---|---|
