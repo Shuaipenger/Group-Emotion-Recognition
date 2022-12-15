@@ -100,8 +100,8 @@
 
 | |   | 代码 | 模型文件  | 保存的npz结果文件  |  
 |---|---|------|---|---|
-| Face Detected |Hybird Network Model | 1_FaceAttention_AlignedModel_pre_cross_vit_wzq_two_crossvit_Faces.py | model_6_1A_All_New_data  |  model6_1_output_data.npz |  
-| Face Detected |  Scene-Densenet161 | Densenet_Emotiw_lr001_wzq_Face.py   |model_1_1_densenet_New_data_Face.pt | model_output_data_Densenet_Face.npz |   
+| Face Detected |Hybird Network Model| 1_FaceAttention_AlignedModel_pre_cross_vit_wzq_two_crossvit_Faces.py | model_6_1A_All_New_data  |  model6_1_output_data.npz |  
+| Face Detected | Scene-Densenet161| Densenet_Emotiw_lr001_wzq_Face.py   |model_1_1_densenet_New_data_Face.pt | model_output_data_Densenet_Face.npz |   
 | No Face Detected |  Hybird Network Model |1_FaceAttention_AlignedModel_pre_cross_vit_wzq_two_crossvit_NoFaces.py |model_6_1B_All_New_data2  | model6_2_output_data.npz | 
 | No Face Detected |  Scene-Densenet161 | Densenet_Emotiw_lr001_wzq_NoFace.py | model_1_1_densenet_New_data_NoFace.pt  | model_output_data_Densenet_No_Face.npz  |  
 | All |  Hybird Network Model_A | 1_FaceAttention_AlignedModel_pre_cross_vit_wzq_onlyone_crossvit.py | model_5_1_All_New_data |model5_output_data_onecrossvit.npz |  
