@@ -46,7 +46,7 @@
 
 **emotic**：emotic数据集文件。
 
-**emotiw**: GAF3.0数据集文件。
+**emotiw**：GAF3.0数据集文件。
 
 **emotiw_skeletons**：使用openpose处理GAF3.0数据集得到的人体骨骼姿态图片。
 
@@ -56,9 +56,9 @@
   *  FaceFeatures：处理我们数据集提取的人脸特征向量。
   *  GlobalFeatures：使用Densenet161网络提取的全局特征向量。
   *  FaceFeatures_Crop_sampling：剪切得到的图片块
-**test_list**: 这包含来自GAF3.0数据集的图像列表，用作EVAL数据集。
+**test_list**“：这包含来自GAF3.0数据集的图像列表，用作EVAL数据集。
 
-**val_list**: 这包含来自GAF3.0数据集的图像列表，用作VAL数据集。
+**val_list**：这包含来自GAF3.0数据集的图像列表，用作VAL数据集。
 
 ### 处理数据集过程：
 图片->MTCNN->制作FaceCoordinates、FaceFeatures、CroppedFaces、AlignedCroppedimages文件
@@ -69,7 +69,7 @@
 
 **CroppedFaces**：由`Face_Cropper_TestDataset.ipynb`和 `Face_Cropper_TrainValDataset.ipynb`处理数据集和`FaceCoordinates`文件得来。
 
-**AlignedCroppedimages**： 用`AlignedFaces_Extractor_Train.ipynb`和`AlignedFaces_Extractor_Test.ipynb`处理`CroppedFaces`得到。
+**AlignedCroppedimages**：用`AlignedFaces_Extractor_Train.ipynb`和`AlignedFaces_Extractor_Test.ipynb`处理`CroppedFaces`得到。
 
 
 ## 结果复现
