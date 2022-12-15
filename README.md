@@ -13,6 +13,21 @@ TrainedModels：保存的模型文件。
 
 Visualization：混淆矩阵可视化。
 
+# 安装环境
+
+The following dependencies are required by the repository:
+
++ Python v3.8.12
++ PyTorch v1.10.0
++ TorchVision v0.11.1
++ NumPy
++ SciPy
++ Scikit-Learn
++ Matplotlib
++ PIL
++ Pickle
+
+
 
 # 结果复现
 1.使用代码文件训练并保存为模型文件
