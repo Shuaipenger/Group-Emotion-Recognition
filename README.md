@@ -1,3 +1,17 @@
+## 安装环境
+
+存储库需要以下依赖项：
+
++ Python v3.8.12
++ PyTorch v1.10.0
++ TorchVision v0.11.1
++ NumPy
++ SciPy
++ Scikit-Learn
++ Matplotlib
++ PIL
++ Pickle
+
 ## Group_Emotion_Recognition_HMM文件介绍
 
 **Models_GAF3.0**：在GAF3.0数据集上训练的代码文件。
@@ -26,11 +40,15 @@
 
 **FaceFeatures**：处理GAF3.0数据集得到的提取的人脸特征向量。
 
+**GlobalFeatures**：使用Densenet161网络提取GAF3.0数据集图片得到的全局特征向量。
+
 **Process_wzq_dataset**：制作数据集时，从视频中处理提取图片的程序。
 
 **emotic**：emotic数据集文件。
 
 **emotiw**: GAF3.0数据集文件。
+
+**emotiw_skeletons**：使用openpose处理GAF3.0数据集得到的人体骨骼姿态图片。
 
 **wzq_dataset**：我们收集的数据集文件和相关处理后的图片文件。
   *  AlignedCroppedImages：剪切并对齐处理的我们的数据集得到的人脸图片。
@@ -38,24 +56,11 @@
   *  FaceFeatures：处理我们数据集提取的人脸特征向量。
   *  GlobalFeatures：使用Densenet161网络提取的全局特征向量。
   *  FaceFeatures_Crop_sampling：剪切得到的图片块
+**test_list**: 这包含来自GAF3.0数据集的图像列表，用作EVAL数据集。
 
+**val_list**: 这包含来自GAF3.0数据集的图像列表，用作VAL数据集。
 
-## 安装环境
-
-The following dependencies are required by the repository:
-
-+ Python v3.8.12
-+ PyTorch v1.10.0
-+ TorchVision v0.11.1
-+ NumPy
-+ SciPy
-+ Scikit-Learn
-+ Matplotlib
-+ PIL
-+ Pickle
-
-
-处理数据集过程：
+### 处理数据集过程：
 图片->MTCNN->制作FaceCoordinates、FaceFeatures、CroppedFaces、AlignedCroppedimages文件
 
 **FaceCoordinates**：用`MTCNN/Face_Extractor_BB_Landmarks_Test.ipynb`和`MTCNN/Face_Extractor_ BB_ Landmarks_ Train.ipynb`处理数据集得到
@@ -67,13 +72,12 @@ The following dependencies are required by the repository:
 **AlignedCroppedimages**： 用`AlignedFaces_Extractor_Train.ipynb`和`AlignedFaces_Extractor_Test.ipynb`处理`CroppedFaces`得到。
 
 
-
 ## 结果复现
 1.使用代码文件训练并保存为模型文件
 
-2.使用模型文件提取npz文件（使用My_Model_OutputSaver_TrainDataset.py代码提取npz）      
+2.使用模型文件提取npz文件（使用`My_Model_OutputSaver_TrainDataset.py`代码提取npz）      
 
-3.①用npz文件做混淆矩阵（Confusion_matrix.py）②复现准确率（Acc_Reappearance.py）③用npz文件做Ensemble调比例（GirdSearch.py）
+3.①用npz文件做混淆矩阵（`Confusion_matrix.py`）②复现准确率（`Acc_Reappearance.py`）③用npz文件做Ensemble调比例（`GirdSearch.py`）
 
 |   | 代码 | 模型文件  | 保存的npz结果文件  |  
 |---|------|---|---|
