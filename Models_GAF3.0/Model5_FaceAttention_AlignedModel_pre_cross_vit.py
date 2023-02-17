@@ -37,8 +37,8 @@ from einops.layers.torch import Rearrange
 device = "cuda" if torch.cuda.is_available() else 'cpu'
 root_dir = "../Dataset/"
 epochs = 27
-batch_size = 32 #32
-maxFaces = 15   #原作是15
+batch_size = 32 
+maxFaces = 15   
 aligned_path = '../TrainedModels/TrainDataset/AlignedModel_EmotiW_lr01_Softmax'
 #aligned_path = '../TrainedModels/AlignedModel_EmotiW_lr001'
 
@@ -126,7 +126,7 @@ class LSoftmaxLinear(nn.Module):
             assert target is None
             return input.matmul(self.weight)
 
-class sphere20a(nn.Module):     #人脸识别方法
+class sphere20a(nn.Module):     
     def __init__(self,classnum=10574,feature=False):
         super(sphere20a, self).__init__()
         self.classnum = classnum
@@ -301,7 +301,7 @@ class EmotiWDataset(Dataset):
         labelname = labeldict[filename.split('_')[0]]
         image = Image.open(self.root_dir+'emotiw/'+train+'/'+labelname+'/'+filename+'.jpg')
 
-        image = image.convert('RGB')  ##用opencv或者是PIL包下面的图形处理函数，把输入的图片从灰度图转为RGB空间的彩色图。这种方法可以适合数据集中既包含有RGB图片又含有灰度图的情况    后加的
+        image = image.convert('RGB')  
 
         if self.transformGlobal:
             image = self.transformGlobal(image)
@@ -345,7 +345,6 @@ val_dataloader = DataLoader(val_dataset, shuffle =True, batch_size = batch_size,
 #---------------------------------------------------------------------------
 # MODEL DEFINITION
 #---------------------------------------------------------------------------
-##对导入的模型参数进行处理，来应对版本变化
 def recursion_change_bn(module):
     if isinstance(module, torch.nn.BatchNorm2d):
         module.num_batches_tracked = True
@@ -366,9 +365,9 @@ def recursion_change_bn3(module):
     else:
         for name, module33 in module._modules.items():
             module33 = recursion_change_bn3(module33)
-##对导入的模型参数进行处理，来迎合版本变化
+
 global_model = torch.load('../TrainedModels/TrainDataset/DenseNet161_EmotiW', map_location=lambda storage, loc: storage).module.features
-##对导入的模型参数进行处理，来迎合版本变化
+
 for name, module in global_model._modules.items():
     recursion_change_bn(module)
 
@@ -377,14 +376,12 @@ for name, module in global_model._modules.items():
 
 for name, module in global_model._modules.items():
     recursion_change_bn3(module)
-##对导入的模型参数进行处理，来迎合版本变化
-for param in global_model.parameters():  ##后加的
-    param.requires_grad = False          ##后加的
 
-# crossvit = torch.load('../TrainedModels/TrainDataset/pre_crossvit_emotiw.pt',map_location=lambda storage, loc: storage).module
+for param in global_model.parameters():  
+    param.requires_grad = False          
 
 align_model = torch.load(aligned_path, map_location=lambda storage, loc: storage).module
-# 最后一层为 (fc6): Linear(in_features=512, out_features=3, bias=True) 没有使用 LSoftmax
+
 
 align_model.fc6 = nn.Linear(512, 256)
 nn.init.kaiming_normal_(align_model.fc6.weight)
@@ -569,7 +566,7 @@ class ImageEmbedder_s(nn.Module):
     ):
         super().__init__()
         assert image_size % patch_size == 0, 'Image dimensions must be divisible by the patch size.'
-        num_patches = (image_size // patch_size) ** 2       # 应该改为人脸个数？
+        num_patches = (image_size // patch_size) ** 2       
         patch_dim = 3 *96*112    #3*64^2=12288
 
         self.to_patch_embedding = nn.Sequential(            # 将批量为 b.通道为 c.高为 h*p1.宽为 w*p2.的图像转化为批量为 b个数为 h*w 维度为  p1*p2*c  的图像块
@@ -696,9 +693,9 @@ class CrossViT(nn.Module):
 
         self.sm_mlp_head = nn.Sequential(nn.LayerNorm(sm_dim), nn.Linear(sm_dim, num_classes))
         self.lg_mlp_head = nn.Sequential(nn.LayerNorm(lg_dim), nn.Linear(lg_dim, num_classes))
-        self.linear = nn.Linear(256, 3)  #后加的，最后的linear层
+        self.linear = nn.Linear(256, 3)  
 
-    def forward(self, face_features,img2):      #img1:32 3 256 256   img2:32 3 256 256
+    def forward(self, face_features,img2):      # img2:32 3 256 256
         sm_tokens = self.sm_image_embedder(face_features)   #face_features：32 16 3 96 112
         lg_tokens = self.lg_image_embedder(img2)
 
@@ -723,13 +720,13 @@ crossvit = CrossViT(
     image_size = 256,
     num_classes = 256,
     depth = 4,               # number of multi-scale encoding blocks
-    sm_dim = 256,            # high res dimension     高分辨率尺寸
+    sm_dim = 256,            # high res dimension     
     sm_patch_size = 64,      # high res patch size (should be smaller than lg_patch_size)
 
     sm_enc_depth = 2,        # high res depth
     sm_enc_heads = 8,        # high res heads
-    sm_enc_mlp_dim = 2048,   # high res feedforward dimension   高分辨率前馈维度
-    lg_dim = 256,            # low res dimension      低分辨率尺寸
+    sm_enc_mlp_dim = 2048,   # high res feedforward dimension   
+    lg_dim = 256,            # low res dimension      
     lg_patch_size = 256,     # low res patch size
 
     lg_enc_depth = 3,        # low res depth
@@ -793,7 +790,7 @@ class FaceAttention(nn.Module):
 
         batch_size = global_features.shape[0]        #batch_size:32
 
-        numberFaces = numberFaces.data.cpu().numpy()  # 改动
+        numberFaces = numberFaces.data.cpu().numpy()  
         
         maxNumber = np.minimum(numberFaces, maxFaces)
 
@@ -837,7 +834,7 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs = 27):
     best_acc = 0.0
     
     for epoch in range(num_epochs):
-        print("Epoch {}/{}".format(epoch, num_epochs - 1))  #括号及其里面的字符 (称作格式化字段) 将会被 format() 中的参数替换
+        print("Epoch {}/{}".format(epoch, num_epochs - 1))  
         print('-' * 10)
         
         for phase in range(2):
@@ -863,7 +860,7 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs = 27):
                 face_features = face_features.to(device)
                 numberFaces = numberFaces.to(device)
                 
-                optimizer.zero_grad()   #梯度归零
+                optimizer.zero_grad()   
                 
                 with torch.set_grad_enabled(phase == 0):
                     outputs = model(inputs, face_features, numberFaces, labels)     # 转到  forword  409行
