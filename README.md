@@ -110,10 +110,10 @@
 
 # 注：
 
-1. MTCNN 模型的实现改编自[this](https://github.com/TropComplique/mtcnn-pytorch).
+1. MTCNN 模型参考自[this](https://github.com/TropComplique/mtcnn-pytorch).
 
-2. SphereFace 模型（用于对齐模型）的实现改编自 [this](https://github.com/clcarwin/sphereface_pytorch).
+2. SphereFace 模型（用于对齐模型）的实现参考自 [this](https://github.com/clcarwin/sphereface_pytorch).
 
-3. Openpose的代码实现改编自 [this](https://github.com/CMU-Perceptual-Computing-Lab/openpose).
+3. Openpose的代码实现自 [this](https://github.com/CMU-Perceptual-Computing-Lab/openpose).
 
-4. 整体网络框架部分参考改编自[this](https://github.com/vlgiitr/Group-Level-Emotion-Recognition).
+4. 网络部分代码参考自[this](https://github.com/vlgiitr/Group-Level-Emotion-Recognition).
