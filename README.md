@@ -14,13 +14,13 @@
 
 ## Group_Emotion_Recognition_HMM文件介绍
 
-**Models_GAF3.0**：在GAF3.0数据集上训练的代码文件。
+**Models_GAF2.0**：在GAF2.0数据集上训练的代码文件。
 
 **Models_wzq_dataset**：在我们的数据集上训练的代码文件。
 
 **MTCNN**：提取人脸图片的相关文件。
 
-**My_ModelOutputs**：在GAF3.0数据库上训练后保存的模型结果文件、准确率复现代码和提取模型结果的代码文件。
+**My_ModelOutputs**：在GAF2.0数据库上训练后保存的模型结果文件、准确率复现代码和提取模型结果的代码文件。
 
 **My_modelOutputs_wzq_dataset**：在我们数据库上训练后的模型结果文件、准确率复现代码和提取模型结果的代码文件。
 
@@ -32,15 +32,15 @@
 
 包含emotic、emotiw和我们自己收集的数据集，以及中间处理文件。
 
-**AlignedCroppedImages**: 剪切对齐后的GAF3.0数据集中人脸图片。
+**AlignedCroppedImages**: 剪切对齐后的GAF2.0数据集中人脸图片。
 
-**CroppedFaces**：剪切处理的GAF3.0数据集中人脸图片
+**CroppedFaces**：剪切处理的GAF2.0数据集中人脸图片
 
-**FaceCoordinates**：处理GAF3.0数据集中人脸位置坐标文件。
+**FaceCoordinates**：处理GAF2.0数据集中人脸位置坐标文件。
 
-**FaceFeatures**：处理GAF3.0数据集得到的提取的人脸特征向量。
+**FaceFeatures**：处理GAF2.0数据集得到的提取的人脸特征向量。
 
-**GlobalFeatures**：使用Densenet161网络提取GAF3.0数据集图片得到的全局特征向量。
+**GlobalFeatures**：使用Densenet161网络提取GAF2.0数据集图片得到的全局特征向量。
 
 **Process_wzq_dataset**：制作数据集时，从视频中处理提取图片的程序。
 
