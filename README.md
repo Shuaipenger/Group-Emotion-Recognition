@@ -52,10 +52,17 @@
 
 **wzq_dataset**：我们收集的数据集文件和相关处理后的图片文件。
   *  AlignedCroppedImages：剪切并对齐处理的我们的数据集得到的人脸图片。
-  *  CroppedFaces：剪切处理的我们的数据集得到的人脸图片。
-  *  FaceFeatures：处理我们数据集提取的人脸特征向量。
+  *  CroppedFaces2：剪切处理的我们的数据集得到的人脸图片。
+  *  FaceFeatures2：处理我们数据集提取的人脸特征向量。
   *  GlobalFeatures：使用Densenet161网络提取的全局特征向量。
   *  FaceFeatures_Crop_sampling：剪切得到的图片块
+  *  train:训练集
+  *  val:验证集
+  *  test:测试集
+  *  train_skeleton:训练集提取的人体姿态图
+  *  val_skeleton:验证集提取的人体姿态图
+  *  test_skeleton:测试集提取的人体姿态图
+  
 **test_list**：这包含来自GAF2.0数据集的图像列表，用作EVAL数据集。
 
 **val_list**：这包含来自GAF2.0数据集的图像列表，用作VAL数据集。
