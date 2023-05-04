@@ -107,11 +107,16 @@
 
 | |   | 代码 | 模型文件  | 保存的npz结果文件  |  
 |---|---|------|---|---|
+| Scene_densenet | Model1 | Densenet_Emotiw_lr001_wzq.py    |model_1_2_densenet_New_data.pt | model1_Scene_Densenet_output_data  |   
+| Scene_resnet | Model2 | resnet18_emotiW_wzq.py         |model_2_1_resnet18_EmotiW_wzq  | model2_Scene_resnet_output_data |   
+| Skeleton_densenet | Model3 | 7_skeletons_wzq.py  | model_skeleton_densenet_New_data2.pt | model3_Skeleton_densenet_output_data |   
+| Skeleton_efficientnet | Model4 | 7_skeletons_EfficientNet_wzq.py | model_skeleton_EfficientNet_New_data.pt | model4_Skeleton_Efficient_output_data  |  
+| Hybrid network model | Model5 | 1_FaceAttention_AlignedModel_pre_cross_vit_wzq_onlyone_crossvit.py |model_5_2_All_New_data  |model5_2_output_data_onecrossvit  |  
 | Face Detected |Hybird Network Model| 1_FaceAttention_AlignedModel_pre_cross_vit_wzq_two_crossvit_Faces.py | model_6_2A_All_New_data  |  model6_2A_output_data.npz |  
 | Face Detected | Scene-Densenet161| Densenet_Emotiw_lr001_wzq_Face.py   |model_1_2_densenet_New_data_Face.pt | model_output_data_Densenet_Face2.npz |   
 | No Face Detected |  Hybird Network Model |1_FaceAttention_AlignedModel_pre_cross_vit_wzq_two_crossvit_NoFaces.py |model_6_2B_All_New_data  | model6_2B_output_data.npz | 
 | No Face Detected |  Scene-Densenet161 | Densenet_Emotiw_lr001_wzq_NoFace.py | model_1_2_densenet_New_data_NoFace.pt  | model_output_data_Densenet_No_Face2.npz  |  
-| All |  Hybird Network Model_A | 1_FaceAttention_AlignedModel_pre_cross_vit_wzq_onlyone_crossvit.py | model_5_2_All_New_data |model5_2_output_data_onecrossvit.npz |  
+| All |  Hybrid Network Model_A | 1_FaceAttention_AlignedModel_pre_cross_vit_wzq_onlyone_crossvit.py | model_5_2_All_New_data |model5_2_output_data_onecrossvit.npz |  
 
 
 
