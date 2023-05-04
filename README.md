@@ -16,7 +16,7 @@
 
 **Models_GAF2.0**：在GAF2.0数据集上训练的代码文件。
 
-**Models_wzq_dataset**：在我们的数据集上训练的代码文件。
+**Models_GroupandScene**：在我们的数据集上训练的代码文件。
 
 **MTCNN**：提取人脸图片的相关文件。
 
@@ -90,7 +90,7 @@
 |  Model4 | Model4_skeletons_EfficientNet.py  | EfficientNet_skeletons  |model4_1_output_data   |  
 |  Model5 | Model5_FaceAttention_AlignedModel_pre_cross_vit.py  |FaceAttention_AlignedModel_FullTrain_lr001_dropout_BN_SoftmaxLr01   |model5_output_data   |  
 
-**复现我们的数据集上的结果**
+**复现在Group and Scene数据集上的结果**
 
 1.使用代码文件训练并保存为模型文件
 
@@ -100,11 +100,11 @@
 
 | |   | 代码 | 模型文件  | 保存的npz结果文件  |  
 |---|---|------|---|---|
-| Face Detected |Hybird Network Model| 1_FaceAttention_AlignedModel_pre_cross_vit_wzq_two_crossvit_Faces.py | model_6_1A_All_New_data  |  model6_1_output_data.npz |  
-| Face Detected | Scene-Densenet161| Densenet_Emotiw_lr001_wzq_Face.py   |model_1_1_densenet_New_data_Face.pt | model_output_data_Densenet_Face.npz |   
-| No Face Detected |  Hybird Network Model |1_FaceAttention_AlignedModel_pre_cross_vit_wzq_two_crossvit_NoFaces.py |model_6_1B_All_New_data2  | model6_2_output_data.npz | 
-| No Face Detected |  Scene-Densenet161 | Densenet_Emotiw_lr001_wzq_NoFace.py | model_1_1_densenet_New_data_NoFace.pt  | model_output_data_Densenet_No_Face.npz  |  
-| All |  Hybird Network Model_A | 1_FaceAttention_AlignedModel_pre_cross_vit_wzq_onlyone_crossvit.py | model_5_1_All_New_data |model5_output_data_onecrossvit.npz |  
+| Face Detected |Hybird Network Model| 1_FaceAttention_AlignedModel_pre_cross_vit_wzq_two_crossvit_Faces.py | model_6_2A_All_New_data  |  model6_2A_output_data.npz |  
+| Face Detected | Scene-Densenet161| Densenet_Emotiw_lr001_wzq_Face.py   |model_1_2_densenet_New_data_Face.pt | model_output_data_Densenet_Face2.npz |   
+| No Face Detected |  Hybird Network Model |1_FaceAttention_AlignedModel_pre_cross_vit_wzq_two_crossvit_NoFaces.py |model_6_2B_All_New_data  | model6_2B_output_data.npz | 
+| No Face Detected |  Scene-Densenet161 | Densenet_Emotiw_lr001_wzq_NoFace.py | model_1_2_densenet_New_data_NoFace.pt  | model_output_data_Densenet_No_Face2.npz  |  
+| All |  Hybird Network Model_A | 1_FaceAttention_AlignedModel_pre_cross_vit_wzq_onlyone_crossvit.py | model_5_2_All_New_data |model5_2_output_data_onecrossvit.npz |  
 
 
 
