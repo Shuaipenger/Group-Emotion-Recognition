@@ -86,7 +86,7 @@
 
 2.使用模型文件提取npz文件（使用`My_Model_OutputSaver_TrainDataset.py`代码提取npz）      
 
-3.①用npz文件做混淆矩阵（`Confusion_matrix.py`）②复现准确率（`Acc_Reappearance.py`）③用npz文件做Ensemble调比例（`GirdSearch.py`）
+3.①复现准确率（`Acc_Reappearance.py`）②用npz文件做Ensemble调比例（`GirdSearch.py`）
 
 |   | 代码 | 模型文件  | 保存的npz结果文件  |  
 |---|------|---|---|
@@ -103,7 +103,7 @@
 
 2.使用模型文件提取npz文件（使用`My_ModelOutputs_wzq_dataset.py`代码提取npz）      
 
-3.①用npz文件做混淆矩阵（`Confusion_matrix_wzq_dataset.py`）②复现准确率（`Acc_Reappearance_wzq_dataset.py`）③用npz文件做Ensemble调比例（`GirdSearch_wzq_dataset.py`）
+3.①复现准确率（`Acc_Reappearance_wzq_dataset.py`）②用npz文件做Ensemble调比例（`GirdSearch_wzq_dataset.py`）
 
 | |   | 代码 | 模型文件  | 保存的npz结果文件  |  
 |---|---|------|---|---|
