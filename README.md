@@ -116,7 +116,6 @@
 | Face Detected | Scene-Densenet161| Densenet_Emotiw_lr001_wzq_Face.py   |model_1_2_densenet_New_data_Face.pt | model_output_data_Densenet_Face2.npz |   
 | No Face Detected |  Hybird Network Model |1_FaceAttention_AlignedModel_pre_cross_vit_wzq_two_crossvit_NoFaces.py |model_6_2B_All_New_data  | model6_2B_output_data.npz | 
 | No Face Detected |  Scene-Densenet161 | Densenet_Emotiw_lr001_wzq_NoFace.py | model_1_2_densenet_New_data_NoFace.pt  | model_output_data_Densenet_No_Face2.npz  |  
-| All |  Hybrid Network Model_A | 1_FaceAttention_AlignedModel_pre_cross_vit_wzq_onlyone_crossvit.py | model_5_2_All_New_data |model5_2_output_data_onecrossvit.npz |  
 
 
 
