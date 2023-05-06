@@ -12,7 +12,7 @@
 + PIL
 + Pickle
 
-## Group_Emotion_Recognition_HMM文件介绍
+## Group_Emotion_Recognition文件介绍
 
 **Models_GAF2.0**：在GAF2.0数据集上训练的代码文件。
 
