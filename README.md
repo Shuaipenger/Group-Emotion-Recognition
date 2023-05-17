@@ -84,7 +84,7 @@
 
 1.使用代码文件训练并保存为模型文件
 
-2.使用模型文件提取npz文件（使用`My_Model_OutputSaver_TrainDataset.py`代码提取npz）      
+2.使用模型文件提取npz文件（使用`My_ModelX_OutputSaver_XXX.py`代码提取npz）      
 
 3.①复现准确率（`Acc_Reappearance.py`）②用npz文件做Ensemble调比例（`GirdSearch.py`）
 
@@ -101,9 +101,9 @@
 
 1.使用代码文件训练并保存为模型文件
 
-2.使用模型文件提取npz文件（使用`My_ModelOutputs_wzq_dataset.py`代码提取npz）      
+2.使用模型文件提取npz文件（使用`My_ModelX_OutputSaverXXX.py`代码提取npz）      
 
-3.①复现准确率（`Acc_Reappearance_wzq_dataset.py`）②用npz文件做Ensemble调比例（`GirdSearch_wzq_dataset.py`）
+3.①复现准确率（`Acc_Reappearance_wzq.py`）②用npz文件做Ensemble调比例（`GirdSearch_wzq.py`）
 
 | |   | 代码 | 模型文件  | 保存的npz结果文件  |  
 |---|---|------|---|---|
