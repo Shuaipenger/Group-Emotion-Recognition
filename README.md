@@ -14,7 +14,7 @@
 
 ## Group_Emotion_Recognition文件介绍
 
-**Models_GAF2.0**：在GAF2.0数据集上训练的代码文件。
+**Models_GAF3.0**：在GAF2.0数据集上训练的代码文件。
 
 **Models_GroupandScene**：在我们的数据集上训练的代码文件。
 
